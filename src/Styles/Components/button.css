@@ -1,0 +1,7 @@
+.btn{
+    @apply px-10; 
+}
+
+.btn.btn-primary{
+    @apply bg-green-600;
+}
