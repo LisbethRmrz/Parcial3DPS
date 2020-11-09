@@ -77,7 +77,7 @@ const Empleados = () => {
                   <td>{Empleado.nombre}</td>
                   <td>{Empleado.horas}</td>
                   <td>
-                    <button className="btn btn-primary" onClick={() => setCurrentId(Empleado.id)}>Editar</button>
+                    <button className="btn btn-warning" onClick={() => setCurrentId(Empleado.id)}>Editar</button>
                     &nbsp;
                     &nbsp;
                     <button className="btn btn-danger" onClick={() => onDeleteEmpleado(Empleado.id)}>Eliminar</button>

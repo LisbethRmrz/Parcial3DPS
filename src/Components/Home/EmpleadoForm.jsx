@@ -79,7 +79,7 @@ const EmpleadoForm = (props) => {
           onChange={handleInputChange}
         />
       </div>
-      <button className="btn btn-primary btn-block">
+      <button className="btn btn-success btn-block">
         {props.currentId === "" ? "Guardar" : "Actualizar"}
       </button>
     </form>

@@ -26,7 +26,7 @@ const ProfilePage = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <div className="navbar-header">
             <a className="navbar-brand" href="/">Business</a>
