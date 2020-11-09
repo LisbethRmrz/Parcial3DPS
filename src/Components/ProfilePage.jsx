@@ -2,11 +2,14 @@ import React, { useContext } from "react";
 import { UserContext } from "../providers/UserProvider";
 import { auth } from "../firebase";
 import { Router, Link } from "@reach/router";
+import 'bootswatch/dist/lumen/bootstrap.min.css';
 
 import Info from "./Home/Info"
 import Contacto from "./Home/Contacto"
 import Help from "./Home/Help"
 import User from "./Home/User"
+import Empleado from "./Home/Empleado"
+import EmpleadoForm from "./Home/EmpleadoForm"
 
 const ProfilePage = () => {
 
@@ -34,6 +37,7 @@ const ProfilePage = () => {
             <li className="navbar-brand"><Link to="contacto">Contacto</Link></li>
             <li className="navbar-brand"><Link to="user">Usuario</Link></li>
             <li className="navbar-brand"><Link to="help">Ayuda</Link></li>
+            <li className="navbar-brand"><Link to="empleado">Empleado</Link></li>
             <button className="btn btn-danger" onClick={() => { signOut() }}>
               Sign out</button>
           </ul>
@@ -44,6 +48,7 @@ const ProfilePage = () => {
         <Contacto exact path="contacto" />
         <Help exact path="help" />
         <User exact path="user" />
+        <Empleado exact path="empleado" />
       </Router>
 
       <div className="container">
