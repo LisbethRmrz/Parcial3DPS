@@ -5,9 +5,14 @@ import { firestore } from "../../firebase";
 const EmpleadoForm = (props) => {
 
   const initialStateValues = {
-    codigo: "",
+    codigo: Number,
     nombre: "",
-    horas: "",
+    horas: Number,
+    sueldoBase: Number,
+    sueldoLiquido: Number,
+    isssDesc: Number,
+    afpDesc: Number,
+    rentaDesc: Number
   };
 
   const [values, setValues] = useState(initialStateValues);
@@ -47,12 +52,13 @@ const EmpleadoForm = (props) => {
         <div className="input-group-text bg-light">
         </div>
         <input
-          type="text"
+          type="number"
           className="form-control"
           placeholder="Ingrese codigo"
           value={values.codigo}
           name="codigo"
           onChange={handleInputChange}
+          required
         />
       </div>
       <div className="form-group input-group">
@@ -65,18 +71,21 @@ const EmpleadoForm = (props) => {
           placeholder="Ingrese nombre"
           className="form-control"
           onChange={handleInputChange}
+          required
         />
       </div>
       <div className="form-group input-group">
         <div className="input-group-text bg-light">
         </div>
         <input
-          type="text"
+          type="number"
           value={values.horas}
           name="horas"
           placeholder="Ingrese horas"
           className="form-control"
           onChange={handleInputChange}
+          min="1"
+          required
         />
       </div>
       <button className="btn btn-success btn-block">
